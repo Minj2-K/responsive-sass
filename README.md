@@ -1,1 +1,1 @@
-# responsive-hotel-# responsive-sass
+# responsive-sass
