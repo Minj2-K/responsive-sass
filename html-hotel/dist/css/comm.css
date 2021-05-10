@@ -1,0 +1,126 @@
+@import url(./reset.css);
+.wrap {
+  padding-left: 200px;
+}
+
+.wrap header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  background-color: lightpink;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.wrap .util {
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+}
+
+.wrap .container {
+  height: calc(100vh - 50px);
+  background-color: lightblue;
+}
+
+.wrap .container article {
+  float: left;
+  width: 20%;
+  height: 25%;
+}
+
+.wrap .container article:first-child {
+  width: 60%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.wrap .container article:nth-child(2) {
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.wrap .container article:nth-child(3) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.wrap .container article:nth-child(4) {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.wrap .container article:nth-child(5) {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.wrap .container article:nth-child(6) {
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.wrap .container article:nth-child(7) {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wrap .container article:nth-child(8) {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.wrap .container article:nth-child(9) {
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.wrap .container article:nth-child(10) {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.wrap .container article:nth-child(11) {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.wrap .container article:last-child {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+@media screen and (max-width: 1599px) {
+  .wrap {
+    padding-left: 0;
+  }
+  .wrap header {
+    position: static;
+    width: 100%;
+    height: 80px;
+  }
+  .wrap .container article {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .wrap .containter article {
+    width: 25%;
+    height: 250px;
+  }
+  .wrap .containter article:first-child {
+    width: 75%;
+    height: 500px;
+  }
+  .wrap .containter article:nth-child(2) {
+    width: 25%;
+  }
+  .wrap .containter article:nth-child(6) {
+    width: 50%;
+  }
+  .wrap .containter article:nth-child(7) {
+    width: 50%;
+  }
+  .wrap .containter article:nth-child(9) {
+    width: 25%;
+  }
+  .wrap .containter article:nth-child(10) {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=comm.css.map */
