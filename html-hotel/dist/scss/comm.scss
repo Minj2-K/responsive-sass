@@ -1,130 +1,489 @@
 @charset "UTF-8";
 @import url(./reset.css);
 
+// body { background: url(/1-1599이상.png) 0 0 no-repeat;}.wrap {opacity: 0.5;}
+
+// 디자인과 맞추기 위한 배경, 후에 지울 것임
+
 $b : #000;
 $w : #fff;
 $yellowgreen : yellowgreen;
 $pink : pink;
 $lightblue : lightblue;
+$gold : rgb(160, 129, 25);
 
 // width 1599px 이상일 경우
-.wrap{
-    padding-left: 200px;
-    background: $yellowgreen;
+.wrap {
+    padding-left: 192px;
 }
-header{
-    position: fixed; top: 0;left: 0;bottom: 0;
-    width: 200px;
-    background: $pink;
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 192px;
+    // background: $pink;
+    padding: 40px 0;
+
+    .logo {
+        a {
+            display: block;
+            width: 63px;
+            height: 55px;
+            margin: 0 auto;
+            background: url(/images/logo2.gif) 0 0 no-repeat;
+            text-indent: -9999px;
+        }
+    }
+
+    #gnb {
+        margin: 123px auto 0;
+
+        a {
+            display: block;
+            padding: 8px 0 8px 60px;
+
+            &:hover {
+                color: $w;
+                background-color: $gold;
+            }
+        }
+    }
+
+    .nav-goto {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        /* header에 이미 fixed있어서 relative 필요 없음 */
+        text-align: center;
+
+        .lst-goto {
+            overflow: auto;
+            /* 떠있는 li 인식시키기 */
+            padding-left: 35px;
+
+            li {
+                float: left;
+                // display:inline-block 도 가능
+
+                &:last-child a::after {
+                    display: none;
+                }
+            }
+
+            a {
+                display: block;
+                padding: 7px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 1px;
+                    height: 14px;
+                    background: $gold;
+                    display: block;
+                    position: absolute;
+                    top: 11px;
+                    right: -1px;
+                }
+
+            }
+        }
+
+        .lst-sns {
+            li {
+                display: inline-block;
+
+                &:first-child {
+                    a {
+                        background-image: url(/images/sns-facebook.svg);
+
+                        &:hover {
+                            background-image: url(/images/sns-facebook-on.svg);
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    a {
+                        margin: 0 3px;
+                        background-image: url(/images/sns-instagram.svg);
+
+                        &:hover {
+                            background-image: url(/images/sns-instagram-on.svg);
+                        }
+                    }
+                }
+
+                &:nth-child(3) {
+                    a {
+                        background-image: url(/images/sns-youtube.svg);
+
+                        &:hover {
+                            background-image: url(/images/sns-youtube-on.svg);
+                        }
+                    }
+                }
+            }
+
+            a {
+                display: block;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-size: 90% auto;
+                background-color: $gold;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            }
+        }
+    }
 }
-.util{
-    height: 50px;
-    background: $b; color: $w;
+
+.util {
+    height: 38px;
+    background: $b;
+
+    .col_left {
+        float: left;
+
+        li {
+            float: left;
+        }
+    }
+
+    .col_right {
+        float: right;
+
+        li {
+            float: left;
+        }
+    }
+
+    a {
+        display: block;
+        height: 38px;
+        line-height: 3.114em;
+        padding: 0 10px;
+        color: $w;
+        font-size: 0.857em;
+        /* 12px (14px 기준) */
+    }
 }
+
 
 $width : 20%;
 $height : 25%;
+/* 브라우저에서 스크롤 생기지 않도록 */
 
-.container{
-    height: calc(100vh - 50px);
-    article{
+.container {
+    height: calc(100vh - 38px);
+
+    /* 브라우저에서 스크롤 생기지 않도록 */
+    article {
         float: left;
-        width: $width; height: $height;
-        &:first-child{
-            width:$width*3; height: $height*2;
-            background: rgba($b,0.1);
-        }
-        &:nth-child(2){
-            width:$width*2; 
-            background: rgba($b,0.15);
-        }
-        &:nth-child(3){
-            background: rgba($b,0.2);
-        }
-        &:nth-child(4){
-            background: rgba($b,0.25);
-        }
-        &:nth-child(5){
-            background: rgba($b,0.3);
-        }
-        &:nth-child(6){
-            width: $width*2;
-            background: rgba($b,0.35);
-        }
-        &:nth-child(7){
-            background: rgba($b,0.4);
-        }
-        &:nth-child(8){
-            background: rgba($b,0.45);
-        }
-        &:nth-child(9){
-            background: rgba($b,0.5);
-        }
-        &:nth-child(10){
-            background: rgba($b,0.55);
-        }
-        &:nth-child(11){
-            background: rgba($b,0.6);
-        }
-        &:nth-child(12){
-            background: rgba($b,0.65);
+        width: $width;
+        height: $height;
+        padding: 30px;
+        position: relative;
+
+        h2 {
+            font-size: 1.375em;
+            margin-bottom: 5px;
         }
 
+        b {
+            display: block;
+            margin-bottom: 3px;
+            font-size: 1.375em;
+        }
+
+        p {
+            opacity: 0.7;
+        }
+
+        &:first-child {
+            width: $width*3;
+            height: $height*2;
+
+            background: url(/images/hotel1.jpg) no-repeat;
+            background-size: cover;
+            background-position: 0 80%;
+
+            strong {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                color: #fff;
+                font-size: 6vw;
+                line-height: 0.8;
+            }
+        }
+
+        &:nth-child(n+2) {
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+
+        &:nth-child(2) {
+            width: $width*2;
+            background: $w;
+
+            .txt2 {
+                color: $b;
+                b {
+                    font-size: 1.375em;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            background: #c6f6fa;
+
+            &::after {
+                content: "\f021";
+                font-family: 'Line Awesome Free';
+                font-weight: 900;
+            }
+        }
+
+        &:nth-child(4) {
+            background-image: url(/images/hotel6.jpg);
+        }
+
+        &:nth-child(5) {
+            background-image: url(/images/hotel2.jpg);
+        }
+
+        &:nth-child(6) {
+            width: $width*2;
+            background: $w;
+
+        }
+
+        &:nth-child(7) {
+            background-image: url(/images/hotel12.jpg);
+        }
+
+        &:nth-child(8) {
+            background: $w;
+        }
+
+        &:nth-child(9) {
+            width: $width*2;
+            background-image: url(/images/hotel3.jpg);
+        }
+
+        &:nth-child(10) {
+            background-image: url(/images/hotel4.jpg);
+        }
+
+        &:nth-child(11) {
+            background: #E6F5FC;
+        }
+
+        &:nth-child(12) {
+            background-image: url(/images/hotel5.jpg);
+        }
     }
 }
 
+
 // width 1599px 이하일 경우
 @media screen and (max-width: 1599px) {
-    .wrap{
+    .wrap {
         padding-left: 0;
     }
-    header{
+
+    header {
         position: static;
-        width: 100%; height: 80px;
+        width: 100%;
+        height: 80px;
     }
 
     $height : 250px;
-    .container{
+
+    /* 스크롤 생길 수 있도록(찌그러지지 않게) */
+    .container {
         height: auto;
-        article{
+        /* 높이의 디폴트 값 auto */
+        overflow: auto;
+
+        /* float 넣어서 */
+        article {
             height: $height;
-            &:first-child{height: $height*2;}
-            &:nth-child(2){height: $height;}
-            &:nth-child(6){height: $height;}
-            &:nth-child(9){height: $height;}
+
+            &:first-child {
+                height: $height*2;
+            }
+
+            &:nth-child(2) {
+                height: $height;
+            }
+
+            &:nth-child(6) {
+                height: $height;
+            }
+
+            &:nth-child(9) {
+                height: $height;
+            }
         }
     }
 }
 
 // width 1280px 이하일 경우
-@media  screen and (max-width: 1280px) {
-    $width : 25%;
-    $height : 250px;
+@media screen and (max-width: 1280px) {
+    $width: 25%;
+    $height: 250px;
 
-    .container{
-        article{
-            width: $width; height: $height;
-            &:first-child{
+    .container {
+
+        /* 우선순위에 밀리지 않기 위해 */
+        article {
+            width: $width;
+            height: $height;
+
+            &:first-child {
                 width: $width*3;
                 height: $height*2;
             }
-            &:nth-child(2){
+
+            &:nth-child(2) {
                 width: $width;
             }
-            &:nth-child(6){
+
+            &:nth-child(6) {
                 width: $width*2;
             }
-            &:nth-child(7){
+
+            &:nth-child(7) {
                 width: $width*2;
             }
-            &:nth-child(9){
+
+            &:nth-child(9) {
                 width: $width;
             }
-            &:nth-child(10){
+
+            &:nth-child(10) {
                 width: $width*2;
             }
 
         }
     }
-    
+
+}
+
+// width 1023px 이하일 경우
+@media screen and (max-width: 1023px) {
+    $width: 33.333%;
+
+    .container {
+        article {
+            width: $width;
+
+            &:first-child {
+                width: $width*3;
+                height: 300px;
+            }
+
+            &:nth-child(2),
+            &:nth-child(6) {
+                width: $width*2;
+            }
+
+            &:nth-child(4),
+            &:nth-child(7),
+            &:nth-child(10),
+            &:nth-child(12) {
+                display: none;
+            }
+
+            &:nth-child(9) {
+                width: $width;
+            }
+        }
+    }
+}
+
+// width 779 px 이하일 경우
+@media screen and (max-width: 779px) {
+    $width: 50%;
+
+    .container {
+        article {
+            width: $width;
+
+            &:first-child,
+            &:nth-child(2) {
+                width: $width*2;
+            }
+
+            &:nth-child(n+3) {
+                width: $width;
+            }
+        }
+    }
+}
+
+// width 639px 이하일 경우(태블릿 버전)
+@media screen and (max-width:639px) {
+
+
+    header {
+        height: 120px;
+    }
+
+    .util {
+        display: none;
+    }
+
+    .container {
+        height: calc(100vh - 120px);
+        /* 태블릿에서 스크롤 안 생기게끔 */
+
+        article {
+            &:first-child {
+                height: 28%;
+            }
+
+            &:nth-child(n+2) {
+                height: 18%;
+            }
+        }
+    }
+}
+
+// width 479px 이하일 경우
+@media screen and (max-width:479px) {
+    .wrap {
+        position: relative;
+    }
+
+    header {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // 가운데 정렬
+        width: 80%;
+        height: 30vh;
+    }
+
+    .container {
+        height: auto;
+
+        article {
+            &:first-child {
+                height: 100vh;
+            }
+
+            &:nth-child(n+2) {
+                display: none
+            }
+        }
+    }
 }
