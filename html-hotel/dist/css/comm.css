@@ -129,6 +129,13 @@
   float: left;
 }
 
+.util .col_left li:last-child a::after {
+  content: "\f107";
+  font-family: 'Line Awesome Free';
+  font-weight: 900;
+  margin-left: 10px;
+}
+
 .util .col_right {
   float: right;
 }
@@ -159,6 +166,9 @@
   height: 25%;
   padding: 30px;
   position: relative;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  overflow: hidden;
 }
 
 .container article h2 {
@@ -170,10 +180,12 @@
   display: block;
   margin-bottom: 3px;
   font-size: 1.375em;
+  letter-spacing: -1px;
 }
 
 .container article p {
   opacity: 0.7;
+  letter-spacing: -0.5px;
 }
 
 .container article:first-child {
@@ -220,6 +232,36 @@
   content: "\f021";
   font-family: 'Line Awesome Free';
   font-weight: 900;
+  font-size: 17em;
+  color: #fff;
+  display: block;
+  position: absolute;
+  bottom: -110px;
+  right: -50px;
+  -webkit-animation: ani-sync 10s  infinite linear;
+          animation: ani-sync 10s  infinite linear;
+}
+
+@-webkit-keyframes ani-sync {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes ani-sync {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
 }
 
 .container article:nth-child(4) {
@@ -264,16 +306,62 @@
   .wrap {
     padding-left: 0;
   }
-  header {
+  #header {
     position: static;
     width: 100%;
-    height: 80px;
+    height: 83px;
+  }
+  #header .logo {
+    width: 63px;
+    position: absolute;
+    top: 20px;
+    left: 67px;
+  }
+  #header #gnb {
+    float: right;
+    margin: 0px;
+    padding: 0 50px 0 0;
+    margin-top: -15px;
+  }
+  #header #gnb ul {
+    overflow: auto;
+  }
+  #header #gnb li {
+    float: left;
+  }
+  #header #gnb li:first-child a::before {
+    content: "\f594";
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+  }
+  #header #gnb li:nth-child(2) a::before {
+    content: "\f0b0";
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+  }
+  #header #gnb li:nth-child(3) a::before {
+    content: "\f64a";
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+  }
+  #header #gnb li:last-child a::before {
+    content: "\f2e7";
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+  }
+  #header #gnb a {
+    background-color: #fff;
+    color: #000;
+    font-size: 1.25em;
+  }
+  #header #gnb a:hover {
+    color: #a08119;
+    background-color: #fff;
   }
   /* 스크롤 생길 수 있도록(찌그러지지 않게) */
   .container {
     height: auto;
     /* 높이의 디폴트 값 auto */
-    overflow: auto;
     /* float 넣어서 */
   }
   .container article {
