@@ -28,10 +28,10 @@ $gold : rgb(160, 129, 25);
     .logo {
         a {
             display: block;
-            width: 63px;
-            height: 55px;
+            width: 137px;
+            height: 109px;
             margin: 0 auto;
-            background: url(/images/logo2.gif) 0 0 no-repeat;
+            background: url(/images/logo_revised.png) 0 0 no-repeat;
             text-indent: -9999px;
         }
     }
@@ -321,8 +321,11 @@ $height : 25%;
         height: 83px;
 
         .logo{
-            width: 63px; 
-            position: absolute; top:20px; left: 67px;
+            a{
+            width: 250px; height: 55px; 
+            position: absolute; top:20px; left: 39px;
+            background: url(/images/logo2_revised.png) 0 0 no-repeat;
+        }
         }
 
         #gnb{
@@ -362,7 +365,7 @@ $height : 25%;
             a{
                 background-color: #fff;
                 color: $b;
-                font-size: 1.25em;
+                font-size: 1.25em  ;
                 &:hover{
                     color: $gold;
                     background-color: #fff;
@@ -372,16 +375,6 @@ $height : 25%;
         }
 
     }
-// .util{
-//     height: 57px;
-//     padding: 10px 0;
-//     .col_left, .col_right{
-//         font-size: 1.2em;
-//         a{
-//             padding: 0 15px;
-//         }
-//     }
-// }
 
 
     $height : 250px;
@@ -416,15 +409,24 @@ $height : 25%;
 
 // width 1280px 이하일 경우
 @media screen and (max-width: 1280px) {
+    #header{
+        #gnb{
+            a{
+                font-size: 1.2em;
+                padding-left: 50px;
+            }
+        }
+    }
+
     $width: 25%;
     $height: 250px;
 
     .container {
-
-        /* 우선순위에 밀리지 않기 위해 */
+        
         article {
             width: $width;
             height: $height;
+            /* 우선순위에 밀리지 않기 위해 */
 
             &:first-child {
                 width: $width*3;
@@ -459,6 +461,14 @@ $height : 25%;
 // width 1023px 이하일 경우
 @media screen and (max-width: 1023px) {
     $width: 33.333%;
+    #header{
+        #gnb{
+            padding-right: 40px;
+            a{
+                font-size: 1em;
+            }
+        }
+    }
 
     .container {
         article {
@@ -491,7 +501,15 @@ $height : 25%;
 // width 779 px 이하일 경우
 @media screen and (max-width: 779px) {
     $width: 50%;
-
+    #header{
+    #gnb{
+        padding-right: 10px;
+        a{
+            font-size: 0.875rem;
+            padding: 8px 0 8px 15px;
+        }
+    }
+}
     .container {
         article {
             width: $width;
@@ -511,9 +529,31 @@ $height : 25%;
 // width 639px 이하일 경우(태블릿 버전)
 @media screen and (max-width:639px) {
 
-
-    header {
+    #header {
         height: 120px;
+        padding: 0;
+        .logo{
+            position: relative;
+            height: 60%;
+            a{
+                position:absolute; top:50% ; left: 50%;;
+                transform: translate(-50%, -50%);
+
+               
+            }
+        }
+        #gnb{
+            padding: 0;
+            width: 85%;
+            float: none;       
+            margin: 20px auto 0 auto;
+            a{
+                &::before{
+                    display: none;
+                }
+                padding: 0 4.7vw;
+            }
+        }
     }
 
     .util {
@@ -542,14 +582,50 @@ $height : 25%;
         position: relative;
     }
 
-    header {
+    #header {
         position: fixed;
-        top: 50%;
+        top: 25%;
         left: 50%;
         transform: translate(-50%, -50%);
         // 가운데 정렬
         width: 80%;
-        height: 30vh;
+        height: 50vh;
+        z-index: 1;
+        .logo{
+            height: 150px;
+            position: relative;            
+            a{
+                position: absolute; top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                width: 250px; height: 150px;
+                background: url(/images/logo_revised_transparent.png) 0 0 no-repeat;
+            }
+        }
+
+        #gnb{
+            position: absolute; top: 70%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px; 
+            margin: 0;
+            li{
+                margin: 4px 0 4px 30px;
+                
+            }
+
+            a{
+                width: 200px; height: 47px;
+                font-size: 1.286em; color: $w;
+                background-color: rgba(0, 0, 0,0.2);
+                border-radius: 13px;
+                line-height: 53px;
+                &:hover{
+                    color:$gold;
+                }
+            }
+        }
+        .nav-goto{
+            display: none;
+        }
     }
 
     .container {
@@ -558,6 +634,12 @@ $height : 25%;
         article {
             &:first-child {
                 height: 100vh;
+                background-position: center;
+                background: url(/images/mobilebg.jpg);
+                background-size: cover;
+                strong{
+                    display: none;  
+                }
             }
 
             &:nth-child(n+2) {
@@ -566,3 +648,5 @@ $height : 25%;
         }
     }
 }
+
+// 로고 폰트 : Trajan Pro, regular, 11pt, 자간 -10, 색  골드
