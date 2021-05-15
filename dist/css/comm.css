@@ -1,0 +1,575 @@
+@charset "UTF-8";
+@import url(./reset.css);
+.wrap {
+  padding-left: 192px;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 192px;
+  padding: 40px 0;
+}
+
+#header .logo a {
+  display: block;
+  width: 137px;
+  height: 109px;
+  margin: 0 auto;
+  background: url(/images/logo_revised.png) 0 0 no-repeat;
+  text-indent: -9999px;
+}
+
+#header #gnb {
+  margin: 123px auto 0;
+}
+
+#header #gnb a {
+  display: block;
+  padding: 8px 0 8px 60px;
+}
+
+#header #gnb a:hover {
+  color: #fff;
+  background-color: #a08119;
+}
+
+#header .nav-goto {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  /* header에 이미 fixed있어서 relative 필요 없음 */
+  text-align: center;
+}
+
+#header .nav-goto .lst-goto {
+  overflow: auto;
+  /* 떠있는 li 인식시키기 */
+  padding-left: 35px;
+}
+
+#header .nav-goto .lst-goto li {
+  float: left;
+}
+
+#header .nav-goto .lst-goto li:last-child a::after {
+  display: none;
+}
+
+#header .nav-goto .lst-goto a {
+  display: block;
+  padding: 7px;
+  position: relative;
+}
+
+#header .nav-goto .lst-goto a::after {
+  content: "";
+  width: 1px;
+  height: 14px;
+  background: #a08119;
+  display: block;
+  position: absolute;
+  top: 11px;
+  right: -1px;
+}
+
+#header .nav-goto .lst-sns li {
+  display: inline-block;
+}
+
+#header .nav-goto .lst-sns li:first-child a {
+  background-image: url(/images/sns-facebook.svg);
+}
+
+#header .nav-goto .lst-sns li:first-child a:hover {
+  background-image: url(/images/sns-facebook-on.svg);
+}
+
+#header .nav-goto .lst-sns li:nth-child(2) a {
+  margin: 0 3px;
+  background-image: url(/images/sns-instagram.svg);
+}
+
+#header .nav-goto .lst-sns li:nth-child(2) a:hover {
+  background-image: url(/images/sns-instagram-on.svg);
+}
+
+#header .nav-goto .lst-sns li:nth-child(3) a {
+  background-image: url(/images/sns-youtube.svg);
+}
+
+#header .nav-goto .lst-sns li:nth-child(3) a:hover {
+  background-image: url(/images/sns-youtube-on.svg);
+}
+
+#header .nav-goto .lst-sns a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: 90% auto;
+  background-color: #a08119;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.util {
+  height: 38px;
+  background: #000;
+}
+
+.util .col_left {
+  float: left;
+}
+
+.util .col_left li {
+  float: left;
+}
+
+.util .col_left li:last-child a::after {
+  content: "\f107";
+  font-family: 'Line Awesome Free';
+  font-weight: 900;
+  margin-left: 10px;
+}
+
+.util .col_right {
+  float: right;
+}
+
+.util .col_right li {
+  float: left;
+}
+
+.util a {
+  display: block;
+  height: 38px;
+  line-height: 3.114em;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 0.857em;
+  /* 12px (14px 기준) */
+}
+
+/* 브라우저에서 스크롤 생기지 않도록 */
+.container {
+  height: calc(100vh - 38px);
+  /* 브라우저에서 스크롤 생기지 않도록 */
+}
+
+.container article {
+  float: left;
+  width: 20%;
+  height: 25%;
+  padding: 30px;
+  position: relative;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  overflow: hidden;
+}
+
+.container article h2 {
+  font-size: 1.375em;
+  margin-bottom: 5px;
+}
+
+.container article b {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 1.375em;
+  letter-spacing: -1px;
+}
+
+.container article p {
+  opacity: 0.7;
+  letter-spacing: -0.5px;
+}
+
+.container article:first-child {
+  width: 60%;
+  height: 50%;
+  background: url(/images/hotel1.jpg) no-repeat;
+  background-size: cover;
+  background-position: 0 80%;
+}
+
+.container article:first-child strong {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  color: #fff;
+  font-size: 6vw;
+  line-height: 0.8;
+}
+
+.container article:nth-child(n+2) {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.container article:nth-child(2) {
+  width: 40%;
+  background: #fff;
+}
+
+.container article:nth-child(2) .txt2 {
+  color: #000;
+}
+
+.container article:nth-child(2) .txt2 b {
+  font-size: 1.375em;
+}
+
+.container article:nth-child(3) {
+  background: #c6f6fa;
+}
+
+.container article:nth-child(3)::after {
+  content: "\f021";
+  font-family: 'Line Awesome Free';
+  font-weight: 900;
+  font-size: 17em;
+  color: #fff;
+  display: block;
+  position: absolute;
+  bottom: -110px;
+  right: -50px;
+  -webkit-animation: ani-sync 10s  infinite linear;
+          animation: ani-sync 10s  infinite linear;
+}
+
+@-webkit-keyframes ani-sync {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes ani-sync {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+.container article:nth-child(4) {
+  background-image: url(/images/hotel6.jpg);
+}
+
+.container article:nth-child(5) {
+  background-image: url(/images/hotel2.jpg);
+}
+
+.container article:nth-child(6) {
+  width: 40%;
+  background: #fff;
+}
+
+.container article:nth-child(7) {
+  background-image: url(/images/hotel12.jpg);
+}
+
+.container article:nth-child(8) {
+  background: #fff;
+}
+
+.container article:nth-child(9) {
+  width: 40%;
+  background-image: url(/images/hotel3.jpg);
+}
+
+.container article:nth-child(10) {
+  background-image: url(/images/hotel4.jpg);
+}
+
+.container article:nth-child(11) {
+  background: #E6F5FC;
+}
+
+.container article:nth-child(12) {
+  background-image: url(/images/hotel5.jpg);
+}
+
+@media screen and (max-width: 1599px) {
+  .wrap {
+    padding-left: 0;
+  }
+  #header {
+    position: static;
+    width: 100%;
+    height: 83px;
+  }
+  #header .logo a {
+    width: 250px;
+    height: 55px;
+    position: absolute;
+    top: 20px;
+    left: 39px;
+    background: url(/images/logo2_revised.png) 0 0 no-repeat;
+  }
+  #header #gnb {
+    float: right;
+    margin: 0px;
+    padding: 0 50px 0 0;
+    margin-top: -15px;
+  }
+  #header #gnb ul {
+    overflow: auto;
+  }
+  #header #gnb li {
+    float: left;
+  }
+  #header #gnb li:first-child a::before {
+    content: "\f594";
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+  }
+  #header #gnb li:nth-child(2) a::before {
+    content: "\f0b0";
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+  }
+  #header #gnb li:nth-child(3) a::before {
+    content: "\f64a";
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+  }
+  #header #gnb li:last-child a::before {
+    content: "\f2e7";
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+  }
+  #header #gnb a {
+    background-color: #fff;
+    color: #000;
+    font-size: 1.25em;
+  }
+  #header #gnb a:hover {
+    color: #a08119;
+    background-color: #fff;
+  }
+  /* 스크롤 생길 수 있도록(찌그러지지 않게) */
+  .container {
+    height: auto;
+    /* 높이의 디폴트 값 auto */
+    /* float 넣어서 */
+  }
+  .container article {
+    height: 250px;
+  }
+  .container article:first-child {
+    height: 500px;
+  }
+  .container article:nth-child(2) {
+    height: 250px;
+  }
+  .container article:nth-child(6) {
+    height: 250px;
+  }
+  .container article:nth-child(9) {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #header #gnb a {
+    font-size: 1.2em;
+    padding-left: 50px;
+  }
+  .container article {
+    width: 25%;
+    height: 250px;
+    /* 우선순위에 밀리지 않기 위해 */
+  }
+  .container article:first-child {
+    width: 75%;
+    height: 500px;
+  }
+  .container article:nth-child(2) {
+    width: 25%;
+  }
+  .container article:nth-child(6) {
+    width: 50%;
+  }
+  .container article:nth-child(7) {
+    width: 50%;
+  }
+  .container article:nth-child(9) {
+    width: 25%;
+  }
+  .container article:nth-child(10) {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #header #gnb {
+    padding-right: 40px;
+  }
+  #header #gnb a {
+    font-size: 1em;
+  }
+  .container article {
+    width: 33.333%;
+  }
+  .container article:first-child {
+    width: 99.999%;
+    height: 300px;
+  }
+  .container article:nth-child(2), .container article:nth-child(6) {
+    width: 66.666%;
+  }
+  .container article:nth-child(4), .container article:nth-child(7), .container article:nth-child(10), .container article:nth-child(12) {
+    display: none;
+  }
+  .container article:nth-child(9) {
+    width: 33.333%;
+  }
+}
+
+@media screen and (max-width: 779px) {
+  #header #gnb {
+    padding-right: 10px;
+  }
+  #header #gnb a {
+    font-size: 0.875rem;
+    padding: 8px 0 8px 15px;
+  }
+  .container article {
+    width: 50%;
+  }
+  .container article:first-child, .container article:nth-child(2) {
+    width: 100%;
+  }
+  .container article:nth-child(n+3) {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  #header {
+    height: 120px;
+    padding: 0;
+  }
+  #header .logo {
+    position: relative;
+    height: 60%;
+  }
+  #header .logo a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  #header #gnb {
+    padding: 0;
+    width: 85%;
+    float: none;
+    margin: 20px auto 0 auto;
+  }
+  #header #gnb a {
+    padding: 0 4.7vw;
+  }
+  #header #gnb a::before {
+    display: none;
+  }
+  .util {
+    display: none;
+  }
+  .container {
+    height: calc(100vh - 120px);
+    /* 태블릿에서 스크롤 안 생기게끔 */
+  }
+  .container article:first-child {
+    height: 28%;
+  }
+  .container article:nth-child(n+2) {
+    height: 18%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .wrap {
+    position: relative;
+  }
+  #header {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 80%;
+    height: 50vh;
+    z-index: 1;
+  }
+  #header .logo {
+    height: 150px;
+    position: relative;
+  }
+  #header .logo a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 250px;
+    height: 150px;
+    background: url(/images/logo_revised_transparent.png) 0 0 no-repeat;
+  }
+  #header #gnb {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 300px;
+    margin: 0;
+  }
+  #header #gnb li {
+    margin: 4px 0 4px 30px;
+  }
+  #header #gnb a {
+    width: 200px;
+    height: 47px;
+    font-size: 1.286em;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
+    line-height: 53px;
+  }
+  #header #gnb a:hover {
+    color: #a08119;
+  }
+  #header .nav-goto {
+    display: none;
+  }
+  .container {
+    height: auto;
+  }
+  .container article:first-child {
+    height: 100vh;
+    background-position: center;
+    background: url(/images/mobilebg.jpg);
+    background-size: cover;
+  }
+  .container article:first-child strong {
+    display: none;
+  }
+  .container article:nth-child(n+2) {
+    display: none;
+  }
+}
+/*# sourceMappingURL=comm.css.map */
