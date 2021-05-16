@@ -2,7 +2,6 @@
 @import url(./reset.css);
 
 
-// 디자인과 맞추기 위한 배경, 후에 지울 것임
 
 $b : #000;
 $w : #fff;
@@ -97,10 +96,10 @@ $gold : rgb(160, 129, 25);
 
                 &:first-child {
                     a {
-                        background-image: url(/images/sns-facebook.svg);
+                        background-image: url(../../images/sns-facebook.svg);
 
                         &:hover {
-                            background-image: url(/images/sns-facebook-on.svg);
+                            background-image: url(../../images/sns-facebook-on.svg);
                         }
                     }
                 }
@@ -108,20 +107,20 @@ $gold : rgb(160, 129, 25);
                 &:nth-child(2) {
                     a {
                         margin: 0 3px;
-                        background-image: url(/images/sns-instagram.svg);
+                        background-image: url(../../images/sns-instagram.svg);
 
                         &:hover {
-                            background-image: url(/images/sns-instagram-on.svg);
+                            background-image: url(../../images/sns-instagram-on.svg);
                         }
                     }
                 }
 
                 &:nth-child(3) {
                     a {
-                        background-image: url(/images/sns-youtube.svg);
+                        background-image: url(../../images/sns-youtube.svg);
 
                         &:hover {
-                            background-image: url(/images/sns-youtube-on.svg);
+                            background-image: url(../../images/sns-youtube-on.svg);
                         }
                     }
                 }
@@ -217,7 +216,7 @@ $height : 25%;
             width: $width*3;
             height: $height*2;
 
-            background: url(/images/hotel1.jpg) no-repeat;
+            background: url(../../images/hotel1.jpg) no-repeat;
             background-size: cover;
             background-position: 0 80%;
 
@@ -268,11 +267,11 @@ $height : 25%;
         }
 
         &:nth-child(4) {
-            background-image: url(/images/hotel6.jpg);
+            background-image: url(../../images/hotel6.jpg);
         }
 
         &:nth-child(5) {
-            background-image: url(/images/hotel2.jpg);
+            background-image: url(../../images/hotel2.jpg);
         }
 
         &:nth-child(6) {
@@ -282,7 +281,7 @@ $height : 25%;
         }
 
         &:nth-child(7) {
-            background-image: url(/images/hotel12.jpg);
+            background-image: url(../../images/hotel12.jpg);
         }
 
         &:nth-child(8) {
@@ -291,11 +290,11 @@ $height : 25%;
 
         &:nth-child(9) {
             width: $width*2;
-            background-image: url(/images/hotel3.jpg);
+            background-image: url(../../images/hotel3.jpg);
         }
 
         &:nth-child(10) {
-            background-image: url(/images/hotel4.jpg);
+            background-image: url(../../images/hotel4.jpg);
         }
 
         &:nth-child(11) {
@@ -303,7 +302,7 @@ $height : 25%;
         }
 
         &:nth-child(12) {
-            background-image: url(/images/hotel5.jpg);
+            background-image: url(../../images/hotel5.jpg);
         }
     }
 }
@@ -324,7 +323,7 @@ $height : 25%;
             a{
             width: 250px; height: 55px; 
             position: absolute; top:20px; left: 39px;
-            background: url(/images/logo2_revised.png) 0 0 no-repeat;
+            background: url(../../images/logo2_revised.png) 0 0 no-repeat;
         }
         }
 
@@ -598,7 +597,7 @@ $height : 25%;
                 position: absolute; top: 50%; left: 50%;
                 transform: translate(-50%, -50%);
                 width: 250px; height: 150px;
-                background: url(/images/logo_revised_transparent.png) 0 0 no-repeat;
+                background: url(../../images/logo_revised_transparent.png) 0 0 no-repeat;
             }
         }
 
@@ -635,7 +634,7 @@ $height : 25%;
             &:first-child {
                 height: 100vh;
                 background-position: center;
-                background: url(/images/mobilebg.jpg);
+                background: url(../../images/mobilebg.jpg);
                 background-size: cover;
                 strong{
                     display: none;  
